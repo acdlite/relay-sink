@@ -106,7 +106,7 @@ describe('createSink()', () => {
     }
 
     const tree = renderIntoDocument(<Root />);
-    await delay(0);
+    await delay(100);
 
     expect(relationships).to.eql([
       'Cersei',
@@ -115,7 +115,7 @@ describe('createSink()', () => {
     ]);
 
     tree.setState({ characterName: 'Cersei' });
-    await delay(0);
+    await delay(100);
 
     expect(relationships).to.eql([
       'Tyrion',

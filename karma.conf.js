@@ -2,9 +2,20 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = function(config) {
+  if (process.env.TRAVIS) {
+    config.set({
+      browsers: ['PhantomJS'],
+      frameworks: ['phantomjs-shim', 'mocha', 'sinon'],
+      singleRun: true
+    });
+  } else {
+    config.set({
+      browsers: ['Chrome'],
+      frameworks: ['mocha', 'sinon']
+    });
+  }
+
   config.set({
-    browsers: ['Chrome'],
-    frameworks: ['mocha', 'sinon'],
     reporters: ['mocha'],
 
     files: [
