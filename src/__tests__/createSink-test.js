@@ -53,12 +53,18 @@ describe('createSink()', () => {
           }
         `
       }
-    }, ({ character }) => {
-      relationships = character.relationships.map(r => r.character.name);
     });
 
     const Character = Relay.createContainer(
-      ({ character }) => <RelationshipSink character={character} />,
+      ({ character }) => (
+        <RelationshipSink
+          character={character}
+          onFragmentUpdate={fragments => {
+            relationships = fragments.character.relationships
+              .map(r => r.character.name);
+          }}
+        />
+      ),
       {
         fragments: {
           character: () => Relay.QL`
