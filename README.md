@@ -26,10 +26,8 @@ const TyrionSink = createSink({
 // the same value — the former points to a value inside Relay's global store,
 // while the latter is the actual unwrapped data.
 <TyrionSink tyrion={this.props.tyrion} onFragmentUpdate={fragments => {
-  expect(fragments.tyrion).to.eql({
-    name: 'Tyrion',
-    house: 'Lannister'
-  });
+  expect(fragments.tyrion.name).to.equal('Tyrion');
+  expect(fragments.tyrion.name).to.equal('Lannister');
 
   // Do whatever you want with the data — e.g. dispatch it to a Flux store
   store.dispatch({
