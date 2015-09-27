@@ -27,7 +27,7 @@ const TyrionSink = createSink({
 // while the latter is the actual unwrapped data.
 <TyrionSink tyrion={this.props.tyrion} onFragmentUpdate={fragments => {
   expect(fragments.tyrion.name).to.equal('Tyrion');
-  expect(fragments.tyrion.name).to.equal('Lannister');
+  expect(fragments.tyrion.house).to.equal('Lannister');
 
   // Do whatever you want with the data — e.g. dispatch it to a Flux store
   store.dispatch({
