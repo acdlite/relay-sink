@@ -45,6 +45,7 @@
     "react-addons-test-utils": "^0.14.0-rc1",
     "react-dom": "^0.14.0-rc1",
     "react-relay": "^0.3.2",
+    "rimraf": "^2.4.3",
     "sinon": "^1.17.1",
     "webpack": "^1.12.2"
   }
