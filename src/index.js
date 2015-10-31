@@ -10,6 +10,9 @@ export function createSink(config) {
     constructor(props) {
       super(props);
       this.fragments = pick(props, fragmentKeys);
+    }
+
+    componentWillMount() {
       this.props.onFragmentUpdate(this.fragments);
     }
 
