@@ -21,6 +21,7 @@
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/react-in-jsx-scope": 2,
+    "react/sort-comp": 0,
 
     //Temporaerirly disabled due to a possible bug in babel-eslint (todomvc example)
     "block-scoped-var": 0,

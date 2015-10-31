@@ -7,10 +7,11 @@ export function createSink(config) {
   const fragmentKeys = Object.keys(config.fragments);
 
   class RelaySink extends Component {
-    constructor(props) {
-      super(props);
-      this.fragments = pick(props, fragmentKeys);
-    }
+    static propTypes = {
+      onFragmentUpdate: PropTypes.func
+    };
+
+    fragments = pick(this.props, fragmentKeys);
 
     componentWillMount() {
       this.props.onFragmentUpdate(this.fragments);
@@ -28,10 +29,6 @@ export function createSink(config) {
       return null;
     }
   }
-
-  RelaySink.propTypes = {
-    onFragmentUpdate: PropTypes.func
-  };
 
   return Relay.createContainer(RelaySink, config);
 }
