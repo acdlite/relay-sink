@@ -1,6 +1,6 @@
 {
   "name": "relay-sink",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use Relay to fetch and store data outside of a React component.",
   "main": "lib/index.js",
   "author": "Andrew Clark <acdlite@me.com>",
