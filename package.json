@@ -17,7 +17,8 @@
     "react-relay": "^0.3.2"
   },
   "dependencies": {
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel": "^5.8.23",
